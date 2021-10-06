@@ -25,9 +25,19 @@ body {
 .title h1 {
   font-size: 55px;
   color: hsl(300, 43%, 22%);
+  line-height: 1;
+  margin-bottom: 0;
 }
 
-.stars {
+.title p {
+  color: hsl(303, 10%, 53%);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* stars */
+
+.stars-section {
   display: grid;
   margin: 100px 50px;
 }
@@ -35,8 +45,22 @@ body {
 .stars-box {
   background-color: hsl(300, 24%, 96%);
   margin: 10px;
-  width: 350px;
+  width: 450px;
   align-content: center;
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.stars-box p {
+  color: hsl(300, 43%, 22%);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.stars {
+  align-self: center;
+  margin: 0 30px;
 }
 .stars-box-1 {
   justify-self: start;
