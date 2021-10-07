@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
 
 body {
+  background: url(images/bg-pattern-top-desktop.svg) no-repeat,
+    url(images/bg-pattern-bottom-desktop.svg) no-repeat bottom right;
+
   padding: 0;
   margin: 0;
   min-height: 100vh;
@@ -22,11 +25,19 @@ body {
   right: 0;
 }
 
+.bg-top-mobile {
+  display: none;
+}
+
+.bg-bottom-mobile {
+  display: none;
+}
+
 .container {
   display: grid;
   grid-template-columns: 50% 50% 100%;
-  height: 90vh;
-  width: 80vw;
+  min-height: 90vh;
+  width: 80%;
   margin: auto;
 }
 
@@ -134,4 +145,70 @@ body {
 
 .reviews h3.status {
   color: hsl(333, 80%, 67%);
+}
+
+@media (max-width: 768px) {
+  body {
+    background: url(images/bg-pattern-top-mobile.svg) no-repeat top left,
+      url(images/bg-pattern-bottom-mobile.svg) no-repeat bottom right;
+  }
+
+  .bg-top {
+    display: none;
+  }
+
+  .bg-bottom {
+    display: none;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+  }
+
+  .title {
+    margin: 20px 0;
+  }
+
+  .title h1 {
+    padding: 0 20px;
+    font-size: 35px;
+  }
+
+  .stars-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
+
+  .stars-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .stars {
+    margin-top: 15px;
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .review-box {
+    margin: 10px 0;
+  }
+  .review-box-1 {
+    align-self: center;
+  }
+  .review-box-3 {
+    align-self: center;
+  }
 }
